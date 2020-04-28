@@ -1,0 +1,411 @@
+{
+	"banner": {
+		"actionVerb": "",
+		"documentId": "",
+		"documentType": "",
+		"errorData": "",
+		"errorId": "",
+		"errorMessage": "",
+		"errorType": "",
+		"sourceEntity": "",
+		"sourceHardwareName": "",
+		"sourceHardwareNode": "",
+		"sourceTimeZone": "",
+		"targetEntity": "",
+		"targetHardwareName": "",
+		"targetHardwareNode": "",
+		"targetTimeZone": "",
+		"technicalErrorMessage": "",
+		"userId": "",
+		"uuid": "",
+		"virtualLocation": "",
+		"xrefFrom": "",
+		"xrefThis": "",
+		"xrefTo": ""
+	},
+	"mfgOrdBomHeader": {
+		"alternateBomId": "",
+		"applicationEngineer": "",
+		"approvalIndicator": "",
+		"billOfMaterial": "",
+		"baseQuantity": "",
+		"batchSizeQuantity": "",
+		"changeOrderRevisionNumber": "",
+		"changeOrderSeverityCode": "",
+		"creationDateTime": "",
+		"customerId": "",
+		"customerName": "",
+		"description": "",
+		"eventSequence": "",
+		"explodeToLevel": "",
+		"findNumber": "",
+		"id": "",
+		"itemQuantityOrdered": "",
+		"jobName": "",
+		"lastEditChangedBy": "",
+		"lastEditDateTime": "",
+		"lineDisplaySequenceNumber": "",
+		"manufacturingLineCode": "",
+		"name": "",
+		"numberOfDetailLines": "",
+		"productionOrderId": "",
+		"purchaserId": "",
+		"purchaserName": "",
+		"revisionLevel": "",
+		"revisionLevelDateTime": "",
+		"revisionReasonIndicator": "",
+		"salesOrderActualShipDate": "",
+		"salesOrderBomNumber": "",
+		"salesOrderId": "",
+		"salesOrderLineNumber": "",
+		"salesOrderPickDate": "",
+		"salesOrderShipSchedule": "",
+		"salesOrderSubLineNumber": "",
+		"stockingProductionLine": "",
+		"suffix": "",
+		"supplimentalDataIndicator": "",
+		"type": "",
+		"updateHeaderFlag": "",
+		"usage": "",
+		"additionalRequestParameters": {
+			"explodePurchasePartsFlag": "",
+			"explodeSubAssembliesFlag": "",
+			"includePhantomLevel": "",
+			"singleLevelBom": ""
+		},
+		"disposition": [
+			{
+				"code": "",
+				"description": "",
+				"stateChanges": [
+					{
+						"changedBy": "",
+						"dateTime": "",
+						"description": "",
+						"fromCode": "",
+						"reasonCode": "",
+						"reasonDescription": "",
+						"toCode": ""
+					}
+				]
+			}
+		],
+		"effectivityPeriod": {
+			"beginningDate": "",
+			"changeIdCurrent": "",
+			"changeIdPrevious": "",
+			"duration": "",
+			"effectivityType": "",
+			"endingDate": ""
+		},
+		"item": {
+			"categoryCode": "",
+			"description": "",
+			"inventoryType": "",
+			"itemNumber": "",
+			"leadTime": "",
+			"makeBuyCode": "",
+			"productId": "",
+			"type": "",
+			"uom": "",
+			"variation": "",
+			"disposition": [
+				{
+					"code": "",
+					"description": "",
+					"stateChanges": [
+						{
+							"changedBy": "",
+							"dateTime": "",
+							"description": "",
+							"fromCode": "",
+							"reasonCode": "",
+							"reasonescription": "",
+							"toCode": ""
+						}
+					]
+				}
+			],
+			"itemId": {
+				"catalogItemId": "",
+				"eanucc13": "",
+				"id": "",
+				"productCategory": "",
+				"productCode": "",
+				"productSubCategory": "",
+				"revision": "",
+				"revisionDate": "",
+				"sCatalogItemId": "",
+				"UPC": ""
+			}
+		},
+		"location": {
+			"alternateId": "",
+			"description": "",
+			"id": "",
+			"msaCatalog": "",
+			"name": "",
+			"plantAlpha": ""
+		},
+		"texts": [
+			{
+				"tagColumn": "",
+				"textId": "",
+				"textLine": ""
+			}
+		]
+	},
+	"mfgOrdBomDetails": [
+		{
+			"action": "",
+			"alternateBomId": "",
+			"billOfMaterial": "",
+			"bomItemNbr": "",
+			"cellNbr": "",
+			"componentParentId": "",
+			"componentParentItemNumber": "",
+			"componentType": "",
+			"componentUsage": "",
+			"configuration": "",
+			"demandControlIndicator": "",
+			"engineeringChangeOrderId": "",
+			"engineeringDrawingId": "",
+			"extendedItemQuantityPer": "",
+			"findNumber": "",
+			"grossItemQuantity": "",
+			"issueControlIndicator": "",
+			"itemOnOrderFlag": "",
+			"lastEditChangedBy": "",
+			"lastEditDateTime": "",
+			"levelNumber": "",
+			"operationId": "",
+			"optionPercentage": "",
+			"revisionLevelIn": "",
+			"revisionLevelOut": "",
+			"scrapPercentage": "",
+			"sectionId": "",
+			"sequenceNumber": "",
+			"shippingSplit": "",
+			"workCenter": "",
+			"effectivityPeriod": {
+				"beginningDate": "",
+				"changeIdCurrent": "",
+				"changeIdPrevious": "",
+				"duration": "",
+				"effectivityType": "",
+				"endingDate": ""
+			},
+			"itemData": {
+				"backflushFlag": "",
+				"consumption": "",
+				"itemMasterFlag": "",
+				"leadTimeOffset": "",
+				"lotSizeMultiple": "",
+				"manufacturingLineCode": "",
+				"maximumLotSize": "",
+				"minimumLotSize": "",
+				"percentRequiredQuantity": "",
+				"primaryLocation": "",
+				"pseudoFlag": "",
+				"quantity": "",
+				"quantityType": "",
+				"scrapIndicator": "",
+				"stockingLocation": "",
+				"stockingProductionLine": "",
+				"alternateStockingLocations": [
+					{
+						"alternateId": "",
+						"description": "",
+						"id": "",
+						"stockingProductionLine": "",
+						"storageBin": "",
+						"type": ""
+					}
+				],
+				"effectivityPeriod": {
+					"beginningDate": "",
+					"changeIdCurrent": "",
+					"changeIdPrevious": "",
+					"duration": "",
+					"effectivityType": "",
+					"endingDate": ""
+				},
+				"item": {
+					"categoryCode": "",
+					"description": "",
+					"inventoryType": "",
+					"itemNumber": "",
+					"leadTime": "",
+					"makeBuyCode": "",
+					"productId": "",
+					"type": "",
+					"uom": "",
+					"variation": "",
+					"disposition": [
+						{
+							"code": "",
+							"description": "",
+							"stateChanges": [
+								{
+									"changedBy": "",
+									"dateTime": "",
+									"description": "",
+									"fromCode": "",
+									"reasonCode": "",
+									"reasonescription": "",
+									"toCode": ""
+								}
+							]
+						}
+					],
+					"itemId": {
+						"catalogItemId": "",
+						"eanucc13": "",
+						"id": "",
+						"productCategory": "",
+						"productCode": "",
+						"productSubCategory": "",
+						"revision": "",
+						"revisionDate": "",
+						"sCatalogItemId": "",
+						"UPC": ""
+					}
+				}
+			},
+			"materialAvailabilityDetails": [
+				{
+					"bomId": "",
+					"bomRevision": "",
+					"bomSuffix": "",
+					"businessUnitId": "",
+					"businessUnitName": "",
+					"businessUnitFunction": "",
+					"glEntity": "",
+					"inventoryDisposition": "",
+					"itemQuantityTotal": "",
+					"productionOrderId": "",
+					"purchaseOrderId": "",
+					"purchaseOrderLine": "",
+					"purchaseOrderRelease": "",
+					"quantityAllocated": "",
+					"quantityAvailable": "",
+					"quantityBlocked": "",
+					"quantityInspected": "",
+					"quantityInTransit": "",
+					"quantityOrdered": "",
+					"quantityReceived": "",
+					"receivedDateTime": "",
+					"requiredDateTime": "",
+					"salesOrderBomNumber": "",
+					"salesOrderChangeOrderRevision": "",
+					"salesOrderId": "",
+					"salesOrderLineNumber": "",
+					"salesOrderLineDisplaySequence": "",
+					"salesOrderShipSchedule": "",
+					"salesOrderSubLine": "",
+					"soldOriginalPromiseDateTime": "",
+					"soldCurrentPromiseDateTime": "",
+					"substitionAllowedFlag": "",
+					"supplierPromiseDate": "",
+					"documentReference": {
+						"docType": "",
+						"docKeyId": [
+							{
+								"keyLevel": "",
+								"keyValue": ""
+							}
+						]
+					},
+					"effectivityPeriod": {
+						"beginningDate": "",
+						"changeIdCurrent": "",
+						"changeIdPrevious": "",
+						"duration": "",
+						"effectivityType": "",
+						"endingDate": ""
+					},
+					"item": {
+						"categoryCode": "",
+						"description": "",
+						"inventoryType": "",
+						"itemNumber": "",
+						"leadTime": "",
+						"makeBuyCode": "",
+						"productId": "",
+						"type": "",
+						"uom": "",
+						"variation": "",
+						"disposition": [
+							{
+								"code": "",
+								"description": "",
+								"stateChanges": [
+									{
+										"changedBy": "",
+										"dateTime": "",
+										"description": "",
+										"fromCode": "",
+										"reasonCode": "",
+										"reasonescription": "",
+										"toCode": ""
+									}
+								]
+							}
+						],
+						"itemId": {
+							"catalogItemId": "",
+							"eanucc13": "",
+							"id": "",
+							"productCategory": "",
+							"productCode": "",
+							"productSubCategory": "",
+							"revision": "",
+							"revisionDate": "",
+							"sCatalogItemId": "",
+							"UPC": ""
+						}
+					},
+					"location": {
+						"alternateId": "",
+						"description": "",
+						"id": "",
+						"msaCatalog": "",
+						"name": "",
+						"plantAlpha": ""
+					},
+					"texts": [
+						{
+							"tagColumn": "",
+							"textId": "",
+							"textLine": ""
+						}
+					]
+				}
+			],
+			"mfgOrdBomSubItems": {
+				"function": "",
+				"bomItemNodeNumber": "",
+				"subItemQuantity": "",
+				"installationPoint": "",
+				"bomSubItemText": ""
+			},
+			"structure": {
+				"action": "",
+				"description": "",
+				"lastEditChangedBy": "",
+				"lastEditDateTime": "",
+				"parentStructureId": "",
+				"sequenceNumber": "",
+				"structureId": "",
+				"structureType": ""
+			},
+			"texts": [
+				{
+					"tagColumn": "",
+					"textId": "",
+					"textLine": ""
+				}
+			]
+		}
+	]  
+}

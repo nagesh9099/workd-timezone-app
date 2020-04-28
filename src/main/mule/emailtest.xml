@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:wsc="http://www.mulesoft.org/schema/mule/wsc" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/wsc http://www.mulesoft.org/schema/mule/wsc/current/mule-wsc.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="59d75184-fb14-42e9-bc76-048713604aba" >
+		<http:listener-connection host="0.0.0.0" port="8091" />
+	</http:listener-config>
+	<flow name="emailtestFlow" doc:id="8a60946f-7b87-4815-9771-3740936da9ac" >
+		<http:listener doc:name="Listener" doc:id="fe191b53-94a8-40e3-a43b-e875fc18b277" config-ref="HTTP_Listener_config" path="/mfgordbomdata"/>
+		
+		<ee:transform doc:name="Transform Message" doc:id="7fc463de-cbc0-4be2-9541-fcdf06e95075" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/java
+---
+{
+	"banner": {
+		"actionVerb": payload.strBanner.sActionVerb,
+		"documentId": "",
+		"documentType": "",
+		"errorData": "",
+		"errorId": "",
+		"errorMessage": "",
+		"errorType": "",
+		"sourceEntity": "",
+		"sourceHardwareName": "",
+		"sourceHardwareNode": "",
+		"sourceTimeZone": "",
+		"targetEntity": "",
+		"targetHardwareName": "",
+		"targetHardwareNode": "",
+		"targetTimeZone": "",
+		"technicalErrorMessage": "",
+		"userId": "",
+		"uuid": "",
+		"virtualLocation": "",
+		"xrefFrom": "",
+		"xrefThis": "",
+		"xrefTo": ""
+	}
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="requestPayload" doc:id="ecafee40-a181-40a5-bda5-1cafc03092cd" message="=============#[payload]==================           "/>
+	</flow>
+</mule>

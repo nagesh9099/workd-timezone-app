@@ -1,0 +1,314 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="xrefrequest" format="json">
+      <types:shape format="weave" example="examples/XrefSalesOrderStructurel.json"><![CDATA[%dw 2.0
+
+type xrefrequest = {|
+  banner: {|
+    actionVerb: String, 
+    documentID: String, 
+    documentType: String, 
+    errorData: String, 
+    errorId: String, 
+    errorMessage: String, 
+    errorType: String, 
+    sourceEntity: String, 
+    sourceHardwareName: String, 
+    sourceHardwareNode: String, 
+    sourceTimeZone: String, 
+    targetEntity: String, 
+    targetHardwareName: String, 
+    targetHardwareNode: String, 
+    targetTimeZone: String, 
+    technicalErrorMessage: String, 
+    xrefFrom: String, 
+    xrefThis: String, 
+    xrefTo: String
+  |}, 
+  salesOrderHdr: {|
+    billingType: String, 
+    carrierCode: String, 
+    creditRiskCategory: String, 
+    customerPoReceivedType: String, 
+    deliverCompleteIndicator: String, 
+    documentType: String, 
+    entryLocation: String, 
+    exportCode: String, 
+    federalTaxStatus: String, 
+    freightTerms: String, 
+    incoTerms: String, 
+    netValueSoldToCurrency: String, 
+    orderStatus: String, 
+    paymentMethod: String, 
+    paymentTerms: String, 
+    purchaserId: String, 
+    routing: String, 
+    salesOffice: String, 
+    shipToProfileIndicator: String, 
+    soldToStateProvinceTaxStatus: String, 
+    userCntryCd: String, 
+    wvShpChrgInd: String, 
+    partners: Array<{|      addressId: String,       country: String,       countryCode: String,       county: String,       partnerType: String,       stateOrProvince: String    |}>, 
+    specialRequirements: {|
+      bidBondIndicator: String, 
+      liquidatedDamageIndicator: String, 
+      manualsCustomerRequestedFormat: String, 
+      manualsMfgFormat: String, 
+      manualsQuantityRequested: String, 
+      performanceBondIndicator: String, 
+      systemStudiesCoordination: String, 
+      systemStudiesNuclear: String, 
+      systemStudiesSeismic: String, 
+      systemStudiesShortCircuit: String, 
+      approvalDrawings: {|
+        customerRequestedDrawingFormat: String, 
+        mfgDeliveryFormatForDrawings: String, 
+        mfgFormatForDrawings: String
+      |}, 
+      recordDrawings: {|
+        customerRequestedDrawingFormat: String, 
+        mfgDeliveryFormatForDrawings: String, 
+        mfgFormatForDrawings: String
+      |}
+    |}, 
+    texts: Array<{| textId: String |}>
+  |}, 
+  salesOrderLines: Array<{|    boPrtyCd: String,     catalogNumber: String,     currencyCode: String,     fOBLocation: String,     hazardousMaterialDocumentationIndicator: String,     itemCostCurrency: String,     orderLineStatus: String,     partialDeliveryAllowedIndicator: String,     plantId: String,     profitCenter: String,     salesUom: String,     shippingPoint: String,     subLineItemTypeIndicator: String,     uom: String,     volumeUom: String,     weightUom: String,     shipmentSchedules: Array<{|      clarificationHoldIndicator: String,       engineeringHoldIndicator: String,       freightTerms: String,       internationalShippingHoldIndicator: String,       largeOrderQuantityIndicator: String,       marketingHoldIndicator: String,       progressPointCode: String,       purchaserHoldIndicator: String,       routing: String,       salesUom: String,       shippingPoint: String,       uom: String,       willAdviseIndicator: String,       addresses: Array<{|        addressId: String,         country: String,         countryCode: String,         county: String,         partnerType: String,         stateOrProvince: String      |}>, 
+      texts: Array<{| textId: String |}>
+    |}>, 
+    specialRequirementsDtl: {|
+      approvalDrawingsSuppliedByIndicator: String, 
+      equipmentTest: String, 
+      testReportIndicator: String, 
+      warrantyCode: String
+    |}, 
+    texts: Array<{| textId: String |}>
+  |}>
+|} {"example": "{\"banner\":{\"actionVerb\":\"\",\"documentID\":\"\",\"documentType\":\"\",\"errorData\":\"\",\"errorId\":\"\",\"errorMessage\":\"\",\"errorType\":\"\",\"sourceEntity\":\"\",\"sourceHardwareName\":\"\",\"sourceHardwareNode\":\"\",\"sourceTimeZone\":\"\",\"targetEntity\":\"\",\"targetHardwareName\":\"\",\"targetHardwareNode\":\"\",\"targetTimeZone\":\"\",\"technicalErrorMessage\":\"\",\"xrefFrom\":\"\",\"xrefThis\":\"\",\"xrefTo\":\"\"},\"salesOrderHdr\":{\"billingType\":\"\",\"carrierCode\":\"\",\"creditRiskCategory\":\"\",\"customerPoReceivedType\":\"\",\"deliverCompleteIndicator\":\"\",\"documentType\":\"\",\"entryLocation\":\"\",\"exportCode\":\"\",\"federalTaxStatus\":\"\",\"freightTerms\":\"\",\"incoTerms\":\"\",\"netValueSoldToCurrency\":\"\",\"orderStatus\":\"\",\"paymentMethod\":\"\",\"paymentTerms\":\"\",\"purchaserId\":\"\",\"routing\":\"\",\"salesOffice\":\"\",\"shipToProfileIndicator\":\"\",\"soldToStateProvinceTaxStatus\":\"\",\"userCntryCd\":\"\",\"wvShpChrgInd\":\"\",\"partners\":[{\"addressId\":\"\",\"country\":\"\",\"countryCode\":\"\",\"county\":\"\",\"partnerType\":\"\",\"stateOrProvince\":\"\"}],\"specialRequirements\":{\"bidBondIndicator\":\"\",\"liquidatedDamageIndicator\":\"\",\"manualsCustomerRequestedFormat\":\"\",\"manualsMfgFormat\":\"\",\"manualsQuantityRequested\":\"\",\"performanceBondIndicator\":\"\",\"systemStudiesCoordination\":\"\",\"systemStudiesNuclear\":\"\",\"systemStudiesSeismic\":\"\",\"systemStudiesShortCircuit\":\"\",\"approvalDrawings\":{\"customerRequestedDrawingFormat\":\"\",\"mfgDeliveryFormatForDrawings\":\"\",\"mfgFormatForDrawings\":\"\"},\"recordDrawings\":{\"customerRequestedDrawingFormat\":\"\",\"mfgDeliveryFormatForDrawings\":\"\",\"mfgFormatForDrawings\":\"\"}},\"texts\":[{\"textId\":\"\"}]},\"salesOrderLines\":[{\"boPrtyCd\":\"\",\"catalogNumber\":\"\",\"currencyCode\":\"\",\"fOBLocation\":\"\",\"hazardousMaterialDocumentationIndicator\":\"\",\"itemCostCurrency\":\"\",\"orderLineStatus\":\"\",\"partialDeliveryAllowedIndicator\":\"\",\"plantId\":\"\",\"profitCenter\":\"\",\"salesUom\":\"\",\"shippingPoint\":\"\",\"subLineItemTypeIndicator\":\"\",\"uom\":\"\",\"volumeUom\":\"\",\"weightUom\":\"\",\"shipmentSchedules\":[{\"clarificationHoldIndicator\":\"\",\"engineeringHoldIndicator\":\"\",\"freightTerms\":\"\",\"internationalShippingHoldIndicator\":\"\",\"largeOrderQuantityIndicator\":\"\",\"marketingHoldIndicator\":\"\",\"progressPointCode\":\"\",\"purchaserHoldIndicator\":\"\",\"routing\":\"\",\"salesUom\":\"\",\"shippingPoint\":\"\",\"uom\":\"\",\"willAdviseIndicator\":\"\",\"addresses\":[{\"addressId\":\"\",\"country\":\"\",\"countryCode\":\"\",\"county\":\"\",\"partnerType\":\"\",\"stateOrProvince\":\"\"}],\"texts\":[{\"textId\":\"\"}]}],\"specialRequirementsDtl\":{\"approvalDrawingsSuppliedByIndicator\":\"\",\"equipmentTest\":\"\",\"testReportIndicator\":\"\",\"warrantyCode\":\"\"},\"texts\":[{\"textId\":\"\"}]}]}"}
+
+]]></types:shape>
+    </types:type>
+    <types:type name="so" format="json">
+      <types:shape format="weave" example="examples/SalesOrderCanonical.json"><![CDATA[%dw 2.0
+
+type so = {|
+  salesOrderHdr: {|
+    action: String, 
+    affiliateItem: String, 
+    billingBlockedIndicator: String, 
+    billingCompanyCode: String, 
+    billingDate: String, 
+    billingType: String, 
+    businessAreaCostCenter: String, 
+    businessAreaId: String, 
+    carrierCode: String, 
+    changeOrderRevisionNumber: String, 
+    companyCode: String, 
+    controllingArea: String, 
+    costCenter: String, 
+    createdBy: String, 
+    createdDateTime: String, 
+    creditControlArea: String, 
+    creditReleaseDate: String, 
+    creditRiskCategory: String, 
+    customerInternalReference: String, 
+    customerPoCreatedDate: String, 
+    customerPoNumber: String, 
+    customerPoNumberSupplement: String, 
+    customerPoReceivedType: String, 
+    deliverCompleteIndicator: String, 
+    deliveryBlockedIndicator: String, 
+    distributionChannel: String, 
+    division: String, 
+    documentCategory: String, 
+    documentDateReceived: String, 
+    documentDateSent: String, 
+    documentType: String, 
+    entryLocation: String, 
+    exportCode: String, 
+    federalTaxStatus: String, 
+    forwardingAgent: String, 
+    freightTerms: String, 
+    guaranteeDate: String, 
+    incoTerms: String, 
+    lastChangedDate: String, 
+    methodOrderReceived: String, 
+    netValue: String, 
+    netValueSoldToCurrency: String, 
+    nextDeliveryDate: String, 
+    orderCombinationIndicator: String, 
+    orderConvertionDate: String, 
+    ordererName: String, 
+    ordererTelephoneNumber: String, 
+    orderReasonCode: String, 
+    orderStatus: String, 
+    paymentMethod: String, 
+    paymentTerms: String, 
+    pricingProcedure: String, 
+    processingType: String, 
+    promotionId: String, 
+    promotionMinimumOrderValue: String, 
+    promotionNotBeforeDate: String, 
+    purchaserId: String, 
+    purchaserPoNumber: String, 
+    quoteName: String, 
+    quoteNumber: String, 
+    quoteValidFromDate: String, 
+    quoteValidToDate: String, 
+    rebateAgreementId: String, 
+    referenceDocumentNumber: String, 
+    requestedDeliveryDate: String, 
+    routing: String, 
+    salesEmployeeId: String, 
+    salesEmployeeName: String, 
+    salesGroup: String, 
+    salesOffice: String, 
+    salesOrderDistrict: String, 
+    salesOrderId: String, 
+    salesOrderNumber: String, 
+    salesOrderOrganization: String, 
+    shippingCondition: String, 
+    shipToParty: String, 
+    shipToProfileIndicator: String, 
+    soldToParty: String, 
+    soldToStateProvinceTaxStatus: String, 
+    textId: String, 
+    transactionGroup: String, 
+    updatedDateTime: String, 
+    userCntryCd: String, 
+    wvShpChrgInd: String, 
+    partners: Array<{|      addressId: String,       addressLine1: String,       addressLine2: String,       addressLine3: String,       addressLine4: String,       addressLine5: String,       addressType: String,       city: String,       coName: String,       country: String,       countryCode: String,       county: String,       emailAddress1: String,       fax1: String,       name1: String,       name2: String,       name3: String,       partnerDescription: String,       partnerId: String,       partnerType: String,       poBox: String,       postalCode: String,       region: String,       stateOrProvince: String,       telephone1: String,       telephoneExtention1: String,       unloadingPoint: String,       url1: String,       oneTimeAccountIndicator: String,       contacts: Array<{|        addressId: String,         addressLine1: String,         addressLine2: String,         addressLine3: String,         addressLine4: String,         addressLine5: String,         addressType: String,         cellPhone1: String,         city: String,         contactDescription: String,         contactId: String,         contactType: String,         country: String,         county: String,         emailAddress1: String,         fax1: String,         name1: String,         postalCode: String,         region: String,         stateOrProvince: String,         telephone1: String      |}>
+    |}>, 
+    specialRequirements: {|
+      bidBondIndicator: String, 
+      liquidatedDamageIndicator: String, 
+      manualsCustomerRequestedFormat: String, 
+      manualsMfgFormat: String, 
+      manualsQuantityRequested: String, 
+      performanceBondIndicator: String, 
+      systemStudiesCoordination: String, 
+      systemStudiesNuclear: String, 
+      systemStudiesSeismic: String, 
+      systemStudiesShortCircuit: String, 
+      testAndTrialDays: String, 
+      approvalDrawings: {|
+        customerRequestedDrawingFormat: String, 
+        mfgDeliveryFormatForDrawings: String, 
+        mfgFormatForDrawings: String, 
+        quantityofDrawings: String
+      |}, 
+      recordDrawings: {|
+        customerRequestedDrawingFormat: String, 
+        mfgDeliveryFormatForDrawings: String, 
+        mfgFormatForDrawings: String, 
+        quantityofDrawings: String
+      |}
+    |}, 
+    texts: Array<{|      tagColumn: String,       textId: String,       textLine: String    |}>
+  |}, 
+  salesOrderLines: Array<{|    alternativeItem: String,     approvalDrawingsDeliveryDate: String,     approvalDrawingsRequestedReturnDate: String,     approvalDrawingsSuppliedByIndicator: String,     billingBlockedIndicator: String,     billingRelevantCode: String,     bomDate: String,     bomId: String,     bomItemNumber: String,     bomSource: String,     boPrtyCd: String,     businessArea: String,     catalogNumber: String,     commissionGroup: String,     committedToShipDate: String,     confirmedBaseQuanity: String,     confirmedSalesQuantity: String,     createdBy: String,     createdDateTime: String,     currencyCode: String,     customerItemId: String,     customerItemNumber: String,     deliveryGroup: String,     deliveryQuantity: String,     fixedShippingTime: String,     fOBLocation: String,     frtBusnsArea: String,     grossWeight: String,     hazardousMaterialDocumentationIndicator: String,     internationArticleNumber: String,     itemCategory: String,     itemCostCurrency: String,     itemDescription: String,     itemDesignation: String,     itemNetValue: String,     itemSpecificationNumber: String,     itemSubCategory: String,     itemType: String,     lastChangedDate: String,     lineCode: String,     lineDisplayNumber: String,     manufacturingBatchNumber: String,     materialGroup: String,     materialId: String,     maxNubmerPartialDeliveries: String,     minDeliveryQuantity: String,     netCost: String,     netPrice: String,     netWeight: String,     nonStockSparePartCode: String,     orderLineStatus: String,     originalMaterialOrdered: String,     overDeliveryAllowedIndicator: String,     partialDeliveryAllowedIndicator: String,     pcalInd: String,     plantId: String,     productCode: String,     productFamily: String,     productHierarchy: String,     profileUnitNetPrice: String,     profitCenter: String,     quantityPerShippingUnit: String,     rejectionReasonCode: String,     replacementItemIndicator: String,     returnsItem: String,     revisionNumber: String,     rout: String,     salesDivision: String,     salesOrderLineNumber: String,     salesOrderSubLineNumber: String,     salesUom: String,     shippingPoint: String,     storageLocation: String,     subLineItemTypeIndicator: String,     supplierNm: String,     totalBackorderQuantity: String,     totalCancelledQuantity: String,     totalInvoicedQuantity: String,     totalOrderQuantity: String,     totalShippedQuantity: String,     totalUnfilledQuantity: String,     targetQuantity: String,     targetUom: String,     targetValue: String,     unitConvertingFactor: String,     unitMatlCost: String,     uom: String,     updatedDateTime: String,     validPriceIndicator: String,     variableShippingTime: String,     volume: String,     volumeUom: String,     weightUom: String,     shipmentSchedules: Array<{|      arrivalTime: String,       backorderQuantity: String,       backorderPriorityCode: String,       bomNumber: String,       cancelledQuantity: String,       carrier: String,       clarificationHoldIndicator: String,       confirmedQuanity: String,       currentOnSiteDate: String,       customerEngineeringChangeStatus: String,       customerRequestedDeliveryDate: String,       dateType: String,       deliveryBlockedIndicator: String,       deliveryScheduleNumber: String,       engineeringHoldIndicator: String,       freightTerms: String,       goodReceiptIndicator: String,       goodsIssueDate: String,       incoTerms: String,       internationalShippingHoldIndicator: String,       invoicedQuantity: String,       invoiceReceiptIndicator: String,       largeOrderQuantityIndicator: String,       loadingDate: String,       marketingHoldIndicator: String,       materialAvailabilityDate: String,       materialAvailabilityOriginalDate: String,       notBeforeDate: String,       orderedQuanity: String,       orderNumber: String,       originalOnSiteDate: String,       progressPointCode: String,       purchaseOrderType: String,       purchaseRequisitonNbr: String,       purchaserHoldIndicator: String,       releaseType: String,       requirementDate: String,       requirementType: String,       requisitionItemNumber: String,       returnDate: String,       routing: String,       salesUom: String,       scheduleDate: String,       scheduleLineCategory: String,       scheduleLineNumber: String,       shipmentLegIndicator: String,       shippedQuanity: String,       shippingPoint: String,       transportationPlanningDate: String,       unfilledQuantity: String,       uom: String,       willAdviseIndicator: String,       addresses: Array<{|        addressId: String,         addressLine1: String,         addressLine2: String,         addressLine3: String,         addressLine4: String,         addressLine5: String,         addressType: String,         city: String,         coName: String,         country: String,         countryCode: String,         county: String,         emailAddress1: String,         fax1: String,         name1: String,         name2: String,         name3: String,         partnerDescription: String,         partnerId: String,         partnerType: String,         poBox: String,         postalCode: String,         region: String,         stateOrProvince: String,         telephone1: String,         telephoneExtention1: String,         unloadingPoint: String,         url1: String,         oneTimeAccountIndicator: String,         contacts: Array<{|          addressId: String,           addressLine1: String,           addressLine2: String,           addressLine3: String,           addressLine4: String,           addressLine5: String,           addressType: String,           cellPhone1: String,           city: String,           contactDescription: String,           contactId: String,           contactType: String,           country: String,           county: String,           emailAddress1: String,           fax1: String,           name1: String,           postalCode: String,           region: String,           stateOrProvince: String,           telephone1: String        |}>
+      |}>, 
+      texts: Array<{|        tagColumn: String,         textId: String,         textLine: String      |}>
+    |}>, 
+    specialRequirementsDtl: {|
+      approvalDrawingsDeliveryDate: String, 
+      approvalDrawingsRequestedReturnDate: String, 
+      approvalDrawingsSuppliedByIndicator: String, 
+      equipmentTest: String, 
+      testReportIndicator: String, 
+      warrantyCode: String
+    |}, 
+    texts: Array<{|      tagColumn: String,       textId: String,       textLine: String    |}>
+  |}>
+|} {"example": "{\"salesOrderHdr\":{\"action\":\"\",\"affiliateItem\":\"\",\"billingBlockedIndicator\":\"\",\"billingCompanyCode\":\"\",\"billingDate\":\"\",\"billingType\":\"\",\"businessAreaCostCenter\":\"\",\"businessAreaId\":\"\",\"carrierCode\":\"\",\"changeOrderRevisionNumber\":\"\",\"companyCode\":\"\",\"controllingArea\":\"\",\"costCenter\":\"\",\"createdBy\":\"\",\"createdDateTime\":\"\",\"creditControlArea\":\"\",\"creditReleaseDate\":\"\",\"creditRiskCategory\":\"\",\"customerInternalReference\":\"\",\"customerPoCreatedDate\":\"\",\"customerPoNumber\":\"\",\"customerPoNumberSupplement\":\"\",\"customerPoReceivedType\":\"\",\"deliverCompleteIndicator\":\"\",\"deliveryBlockedIndicator\":\"\",\"distributionChannel\":\"\",\"division\":\"\",\"documentCategory\":\"\",\"documentDateReceived\":\"\",\"documentDateSent\":\"\",\"documentType\":\"\",\"entryLocation\":\"\",\"exportCode\":\"\",\"federalTaxStatus\":\"\",\"forwardingAgent\":\"\",\"freightTerms\":\"\",\"guaranteeDate\":\"\",\"incoTerms\":\"\",\"lastChangedDate\":\"\",\"methodOrderReceived\":\"\",\"netValue\":\"\",\"netValueSoldToCurrency\":\"\",\"nextDeliveryDate\":\"\",\"orderCombinationIndicator\":\"\",\"orderConvertionDate\":\"\",\"ordererName\":\"\",\"ordererTelephoneNumber\":\"\",\"orderReasonCode\":\"\",\"orderStatus\":\"\",\"paymentMethod\":\"\",\"paymentTerms\":\"\",\"pricingProcedure\":\"\",\"processingType\":\"\",\"promotionId\":\"\",\"promotionMinimumOrderValue\":\"\",\"promotionNotBeforeDate\":\"\",\"purchaserId\":\"\",\"purchaserPoNumber\":\"\",\"quoteName\":\"\",\"quoteNumber\":\"\",\"quoteValidFromDate\":\"\",\"quoteValidToDate\":\"\",\"rebateAgreementId\":\"\",\"referenceDocumentNumber\":\"\",\"requestedDeliveryDate\":\"\",\"routing\":\"\",\"salesEmployeeId\":\"\",\"salesEmployeeName\":\"\",\"salesGroup\":\"\",\"salesOffice\":\"\",\"salesOrderDistrict\":\"\",\"salesOrderId\":\"\",\"salesOrderNumber\":\"\",\"salesOrderOrganization\":\"\",\"shippingCondition\":\"\",\"shipToParty\":\"\",\"shipToProfileIndicator\":\"\",\"soldToParty\":\"\",\"soldToStateProvinceTaxStatus\":\"\",\"textId\":\"\",\"transactionGroup\":\"\",\"updatedDateTime\":\"\",\"userCntryCd\":\"\",\"wvShpChrgInd\":\"\",\"partners\":[{\"addressId\":\"\",\"addressLine1\":\"\",\"addressLine2\":\"\",\"addressLine3\":\"\",\"addressLine4\":\"\",\"addressLine5\":\"\",\"addressType\":\"\",\"city\":\"\",\"coName\":\"\",\"country\":\"\",\"countryCode\":\"\",\"county\":\"\",\"emailAddress1\":\"\",\"fax1\":\"\",\"name1\":\"\",\"name2\":\"\",\"name3\":\"\",\"partnerDescription\":\"\",\"partnerId\":\"\",\"partnerType\":\"\",\"poBox\":\"\",\"postalCode\":\"\",\"region\":\"\",\"stateOrProvince\":\"\",\"telephone1\":\"\",\"telephoneExtention1\":\"\",\"unloadingPoint\":\"\",\"url1\":\"\",\"oneTimeAccountIndicator\":\"\",\"contacts\":[{\"addressId\":\"\",\"addressLine1\":\"\",\"addressLine2\":\"\",\"addressLine3\":\"\",\"addressLine4\":\"\",\"addressLine5\":\"\",\"addressType\":\"\",\"cellPhone1\":\"\",\"city\":\"\",\"contactDescription\":\"\",\"contactId\":\"\",\"contactType\":\"\",\"country\":\"\",\"county\":\"\",\"emailAddress1\":\"\",\"fax1\":\"\",\"name1\":\"\",\"postalCode\":\"\",\"region\":\"\",\"stateOrProvince\":\"\",\"telephone1\":\"\"}]}],\"specialRequirements\":{\"bidBondIndicator\":\"\",\"liquidatedDamageIndicator\":\"\",\"manualsCustomerRequestedFormat\":\"\",\"manualsMfgFormat\":\"\",\"manualsQuantityRequested\":\"\",\"performanceBondIndicator\":\"\",\"systemStudiesCoordination\":\"\",\"systemStudiesNuclear\":\"\",\"systemStudiesSeismic\":\"\",\"systemStudiesShortCircuit\":\"\",\"testAndTrialDays\":\"\",\"approvalDrawings\":{\"customerRequestedDrawingFormat\":\"\",\"mfgDeliveryFormatForDrawings\":\"\",\"mfgFormatForDrawings\":\"\",\"quantityofDrawings\":\"\"},\"recordDrawings\":{\"customerRequestedDrawingFormat\":\"\",\"mfgDeliveryFormatForDrawings\":\"\",\"mfgFormatForDrawings\":\"\",\"quantityofDrawings\":\"\"}},\"texts\":[{\"tagColumn\":\"\",\"textId\":\"\",\"textLine\":\"\"}]},\"salesOrderLines\":[{\"alternativeItem\":\"\",\"approvalDrawingsDeliveryDate\":\"\",\"approvalDrawingsRequestedReturnDate\":\"\",\"approvalDrawingsSuppliedByIndicator\":\"\",\"billingBlockedIndicator\":\"\",\"billingRelevantCode\":\"\",\"bomDate\":\"\",\"bomId\":\"\",\"bomItemNumber\":\"\",\"bomSource\":\"\",\"boPrtyCd\":\"\",\"businessArea\":\"\",\"catalogNumber\":\"\",\"commissionGroup\":\"\",\"committedToShipDate\":\"\",\"confirmedBaseQuanity\":\"\",\"confirmedSalesQuantity\":\"\",\"createdBy\":\"\",\"createdDateTime\":\"\",\"currencyCode\":\"\",\"customerItemId\":\"\",\"customerItemNumber\":\"\",\"deliveryGroup\":\"\",\"deliveryQuantity\":\"\",\"fixedShippingTime\":\"\",\"fOBLocation\":\"\",\"frtBusnsArea\":\"\",\"grossWeight\":\"\",\"hazardousMaterialDocumentationIndicator\":\"\",\"internationArticleNumber\":\"\",\"itemCategory\":\"\",\"itemCostCurrency\":\"\",\"itemDescription\":\"\",\"itemDesignation\":\"\",\"itemNetValue\":\"\",\"itemSpecificationNumber\":\"\",\"itemSubCategory\":\"\",\"itemType\":\"\",\"lastChangedDate\":\"\",\"lineCode\":\"\",\"lineDisplayNumber\":\"\",\"manufacturingBatchNumber\":\"\",\"materialGroup\":\"\",\"materialId\":\"\",\"maxNubmerPartialDeliveries\":\"\",\"minDeliveryQuantity\":\"\",\"netCost\":\"\",\"netPrice\":\"\",\"netWeight\":\"\",\"nonStockSparePartCode\":\"\",\"orderLineStatus\":\"\",\"originalMaterialOrdered\":\"\",\"overDeliveryAllowedIndicator\":\"\",\"partialDeliveryAllowedIndicator\":\"\",\"pcalInd\":\"\",\"plantId\":\"\",\"productCode\":\"\",\"productFamily\":\"\",\"productHierarchy\":\"\",\"profileUnitNetPrice\":\"\",\"profitCenter\":\"\",\"quantityPerShippingUnit\":\"\",\"rejectionReasonCode\":\"\",\"replacementItemIndicator\":\"\",\"returnsItem\":\"\",\"revisionNumber\":\"\",\"rout\":\"\",\"salesDivision\":\"\",\"salesOrderLineNumber\":\"\",\"salesOrderSubLineNumber\":\"\",\"salesUom\":\"\",\"shippingPoint\":\"\",\"storageLocation\":\"\",\"subLineItemTypeIndicator\":\"\",\"supplierNm\":\"\",\"totalBackorderQuantity\":\"\",\"totalCancelledQuantity\":\"\",\"totalInvoicedQuantity\":\"\",\"totalOrderQuantity\":\"\",\"totalShippedQuantity\":\"\",\"totalUnfilledQuantity\":\"\",\"targetQuantity\":\"\",\"targetUom\":\"\",\"targetValue\":\"\",\"unitConvertingFactor\":\"\",\"unitMatlCost\":\"\",\"uom\":\"\",\"updatedDateTime\":\"\",\"validPriceIndicator\":\"\",\"variableShippingTime\":\"\",\"volume\":\"\",\"volumeUom\":\"\",\"weightUom\":\"\",\"shipmentSchedules\":[{\"arrivalTime\":\"\",\"backorderQuantity\":\"\",\"backorderPriorityCode\":\"\",\"bomNumber\":\"\",\"cancelledQuantity\":\"\",\"carrier\":\"\",\"clarificationHoldIndicator\":\"\",\"confirmedQuanity\":\"\",\"currentOnSiteDate\":\"\",\"customerEngineeringChangeStatus\":\"\",\"customerRequestedDeliveryDate\":\"\",\"dateType\":\"\",\"deliveryBlockedIndicator\":\"\",\"deliveryScheduleNumber\":\"\",\"engineeringHoldIndicator\":\"\",\"freightTerms\":\"\",\"goodReceiptIndicator\":\"\",\"goodsIssueDate\":\"\",\"incoTerms\":\"\",\"internationalShippingHoldIndicator\":\"\",\"invoicedQuantity\":\"\",\"invoiceReceiptIndicator\":\"\",\"largeOrderQuantityIndicator\":\"\",\"loadingDate\":\"\",\"marketingHoldIndicator\":\"\",\"materialAvailabilityDate\":\"\",\"materialAvailabilityOriginalDate\":\"\",\"notBeforeDate\":\"\",\"orderedQuanity\":\"\",\"orderNumber\":\"\",\"originalOnSiteDate\":\"\",\"progressPointCode\":\"\",\"purchaseOrderType\":\"\",\"purchaseRequisitonNbr\":\"\",\"purchaserHoldIndicator\":\"\",\"releaseType\":\"\",\"requirementDate\":\"\",\"requirementType\":\"\",\"requisitionItemNumber\":\"\",\"returnDate\":\"\",\"routing\":\"\",\"salesUom\":\"\",\"scheduleDate\":\"\",\"scheduleLineCategory\":\"\",\"scheduleLineNumber\":\"\",\"shipmentLegIndicator\":\"\",\"shippedQuanity\":\"\",\"shippingPoint\":\"\",\"transportationPlanningDate\":\"\",\"unfilledQuantity\":\"\",\"uom\":\"\",\"willAdviseIndicator\":\"\",\"addresses\":[{\"addressId\":\"\",\"addressLine1\":\"\",\"addressLine2\":\"\",\"addressLine3\":\"\",\"addressLine4\":\"\",\"addressLine5\":\"\",\"addressType\":\"\",\"city\":\"\",\"coName\":\"\",\"country\":\"\",\"countryCode\":\"\",\"county\":\"\",\"emailAddress1\":\"\",\"fax1\":\"\",\"name1\":\"\",\"name2\":\"\",\"name3\":\"\",\"partnerDescription\":\"\",\"partnerId\":\"\",\"partnerType\":\"\",\"poBox\":\"\",\"postalCode\":\"\",\"region\":\"\",\"stateOrProvince\":\"\",\"telephone1\":\"\",\"telephoneExtention1\":\"\",\"unloadingPoint\":\"\",\"url1\":\"\",\"oneTimeAccountIndicator\":\"\",\"contacts\":[{\"addressId\":\"\",\"addressLine1\":\"\",\"addressLine2\":\"\",\"addressLine3\":\"\",\"addressLine4\":\"\",\"addressLine5\":\"\",\"addressType\":\"\",\"cellPhone1\":\"\",\"city\":\"\",\"contactDescription\":\"\",\"contactId\":\"\",\"contactType\":\"\",\"country\":\"\",\"county\":\"\",\"emailAddress1\":\"\",\"fax1\":\"\",\"name1\":\"\",\"postalCode\":\"\",\"region\":\"\",\"stateOrProvince\":\"\",\"telephone1\":\"\"}]}],\"texts\":[{\"tagColumn\":\"\",\"textId\":\"\",\"textLine\":\"\"}]}],\"specialRequirementsDtl\":{\"approvalDrawingsDeliveryDate\":\"\",\"approvalDrawingsRequestedReturnDate\":\"\",\"approvalDrawingsSuppliedByIndicator\":\"\",\"equipmentTest\":\"\",\"testReportIndicator\":\"\",\"warrantyCode\":\"\"},\"texts\":[{\"tagColumn\":\"\",\"textId\":\"\",\"textLine\":\"\"}]}]}"}
+
+]]></types:shape>
+    </types:type>
+    <types:type name="aqua" format="json">
+      <types:shape format="weave" example="examples/SalesOrderAcquisition.json"><![CDATA[%dw 2.0
+
+type aqua = {|
+  SalesOrder: {|
+    Sender: String, 
+    Receiver: String, 
+    Document: String, 
+    SalesOrderHeader: {|
+      OrderAction: String, 
+      Q2CNumber: String, 
+      PurchaserId: String, 
+      PurchaserName: String, 
+      CustomerName: String, 
+      PurchaserPONumber: String, 
+      QuoteStatus: String, 
+      LastChangeDate: String, 
+      OrderConvertDate: String, 
+      ProjectJobIndicator: String, 
+      EntryLocation: String, 
+      SalesOfficeName: String, 
+      SalesRepName: String, 
+      ProjectManagerName: String, 
+      PurchaserCountryCode: String, 
+      LocationCompleteShipIndicator: String, 
+      ExportType: String, 
+      FederalTaxStatus: String, 
+      StateProvinceSalesTaxStatus: String, 
+      CurrencyCode: String, 
+      HeaderNotesMarkingsInstructions: Array<{|        TextType: String,         Text: Array<String>
+      |}>, 
+      Address: Array<{|        AddressType: String,         Name: String,         AddressLine1: String,         AddressLine2: String,         AddressLine3: String,         AddressLine4: String,         AddressLine5: String,         City: String,         StateOrProvince: String,         PostalCode: String,         CountryCode: String,         CountryName: String,         CountyName: String      |}>, 
+      QuoteSpecialRequirements: {|
+        QuantityOfManualsRequested: String, 
+        CustomerRequestedFormatForManuals: String, 
+        ManufacturingFormatForManuals: String, 
+        SystemStudiesCoordination: String, 
+        SystemStudiesNuclear: String, 
+        SystemStudiesSeismic: String, 
+        SystemStudiesShortCircuit: String, 
+        BidBondIndicator: String, 
+        PerformanceBondIndicator: String, 
+        LiquidatedDamageIndicator: String, 
+        NumberTestAndTrialDays: String
+      |}, 
+      ApprovalDrawings: {|
+        QuantityOfDrawings: String, 
+        CustomerRequestedDrawingFormat: String, 
+        ManufacturingDrawingFormat: String, 
+        ManufacturingDrawingDeliveryMode: String
+      |}, 
+      RecordDrawings: {|
+        QuantityOfDrawings: String, 
+        CustomerRequestedDrawingFormat: String, 
+        ManufacturingDrawingFormat: String, 
+        ManufacturingDrawingDeliveryMode: String
+      |}
+    |}, 
+    SalesOrderItem: Array<{|      BOMNumber: String,       LineDisplayNumber: String,       LineNumber: String,       PurchaserSpecifiedLineNumber: String,       SubLineItemId: String,       SubLineItemType: String,       CatalogNumber: String,       ProductCode: String,       CatalogDescription: String,       DesignationDescription: String,       ProductSpecificationNumber: String,       LineCode: String,       CategoryId: String,       SubCategoryId: String,       ProductSelectorGroupId: String,       TotalOrderedQuantity: String,       TotalUnfilledQuantity: String,       TotalInvoicedQuantity: String,       TotalShippedQuantity: String,       TotalCancelledQuantity: String,       UnitOfMeasure: String,       UnitWeight: String,       ProfileUnitNetPrice: String,       AuthorizedEquipmentUnitSellingNetPrice: String,       NonStockSparePartCode: String,       FOBLocation: String,       HazardousMaterialIndicator: String,       CommittedShipDate: String,       ItemNotesMarkingsInstructions: Array<{|        TextType: String,         Text: Array<Any>
+      |}>, 
+      ItemSpecialRequirements: {|
+        ApprovalDrawingsSentDate: String, 
+        ApprovalDrawingsRequestedDate: String, 
+        ApprovalDrawingsSuppliedBy: String, 
+        EquipmentTest: String, 
+        TestReports: String, 
+        Warranty: String
+      |}, 
+      ShipmentSchedule: Array<{|        ShipmentScheduleId: String,         ShippingPoint: String,         ProgressPoint: String,         UnfilledQuantity: String,         ShippedQuantity: String,         CancelledQuantity: String,         InvoicedQuantity: String,         NotBeforeDate: String,         CustomerRequestedDeliveryDate: String,         CurrentPromiseDate: String,         OriginalPromiseDate: String,         CurrentOnsiteDate: String,         OriginalOnsiteDate: String,         Routing: String,         Carrier: String,         FreightTerms: String,         IncoTerms: String,         InternationallShipHoldIndicator: String,         MarketingHoldIndicator: String,         PurchaserHoldIndicator: String,         EngineeringHoldindicator: String,         ClarificationHoldIndicator: String,         WillAdviseIndicator: String,         LargeOrderQuantityIndicator: String,         ShipToAddress: {|          AddressType: String,           Name: String,           AddressLine1: String,           AddressLine2: String,           AddressLine3: String,           AddressLine4: String,           AddressLine5: String,           City: String,           StateOrProvince: String,           PostalCode: String,           CountryCode: String,           CountryName: String,           CountyName: String        |},         ShipmentNotesMarkingsInstructions: Array<{|          TextType: String,           Text: Array<Any>
+        |}>
+      |}>
+    |}>
+  |}
+|} {"example": "{\"SalesOrder\":{\"Sender\":\"\",\"Receiver\":\"\",\"Document\":\"\",\"SalesOrderHeader\":{\"OrderAction\":\"\",\"Q2CNumber\":\"\",\"PurchaserId\":\"\",\"PurchaserName\":\"\",\"CustomerName\":\"\",\"PurchaserPONumber\":\"\",\"QuoteStatus\":\"\",\"LastChangeDate\":\"\",\"OrderConvertDate\":\"\",\"ProjectJobIndicator\":\"\",\"EntryLocation\":\"\",\"SalesOfficeName\":\"\",\"SalesRepName\":\"\",\"ProjectManagerName\":\"\",\"PurchaserCountryCode\":\"\",\"LocationCompleteShipIndicator\":\"\",\"ExportType\":\"\",\"FederalTaxStatus\":\"\",\"StateProvinceSalesTaxStatus\":\"\",\"CurrencyCode\":\"\",\"HeaderNotesMarkingsInstructions\":[{\"TextType\":\"\",\"Text\":[\"\"]}],\"Address\":[{\"AddressType\":\"\",\"Name\":\"\",\"AddressLine1\":\"\",\"AddressLine2\":\"\",\"AddressLine3\":\"\",\"AddressLine4\":\"\",\"AddressLine5\":\"\",\"City\":\"\",\"StateOrProvince\":\"\",\"PostalCode\":\"\",\"CountryCode\":\"\",\"CountryName\":\"\",\"CountyName\":\"\"}],\"QuoteSpecialRequirements\":{\"QuantityOfManualsRequested\":\"\",\"CustomerRequestedFormatForManuals\":\"\",\"ManufacturingFormatForManuals\":\"\",\"SystemStudiesCoordination\":\"\",\"SystemStudiesNuclear\":\"\",\"SystemStudiesSeismic\":\"\",\"SystemStudiesShortCircuit\":\"\",\"BidBondIndicator\":\"\",\"PerformanceBondIndicator\":\"\",\"LiquidatedDamageIndicator\":\"\",\"NumberTestAndTrialDays\":\"\"},\"ApprovalDrawings\":{\"QuantityOfDrawings\":\"\",\"CustomerRequestedDrawingFormat\":\"\",\"ManufacturingDrawingFormat\":\"\",\"ManufacturingDrawingDeliveryMode\":\"\"},\"RecordDrawings\":{\"QuantityOfDrawings\":\"\",\"CustomerRequestedDrawingFormat\":\"\",\"ManufacturingDrawingFormat\":\"\",\"ManufacturingDrawingDeliveryMode\":\"\"}},\"SalesOrderItem\":[{\"BOMNumber\":\"\",\"LineDisplayNumber\":\"\",\"LineNumber\":\"\",\"PurchaserSpecifiedLineNumber\":\"\",\"SubLineItemId\":\"\",\"SubLineItemType\":\"\",\"CatalogNumber\":\"\",\"ProductCode\":\"\",\"CatalogDescription\":\"\",\"DesignationDescription\":\"\",\"ProductSpecificationNumber\":\"\",\"LineCode\":\"\",\"CategoryId\":\"\",\"SubCategoryId\":\"\",\"ProductSelectorGroupId\":\"\",\"TotalOrderedQuantity\":\"\",\"TotalUnfilledQuantity\":\"\",\"TotalInvoicedQuantity\":\"\",\"TotalShippedQuantity\":\"\",\"TotalCancelledQuantity\":\"\",\"UnitOfMeasure\":\"\",\"UnitWeight\":\"\",\"ProfileUnitNetPrice\":\"\",\"AuthorizedEquipmentUnitSellingNetPrice\":\"\",\"NonStockSparePartCode\":\"\",\"FOBLocation\":\"\",\"HazardousMaterialIndicator\":\"\",\"CommittedShipDate\":\"\",\"ItemNotesMarkingsInstructions\":[{\"TextType\":\"\",\"Text\":[]}],\"ItemSpecialRequirements\":{\"ApprovalDrawingsSentDate\":\"\",\"ApprovalDrawingsRequestedDate\":\"\",\"ApprovalDrawingsSuppliedBy\":\"\",\"EquipmentTest\":\"\",\"TestReports\":\"\",\"Warranty\":\"\"},\"ShipmentSchedule\":[{\"ShipmentScheduleId\":\"\",\"ShippingPoint\":\"\",\"ProgressPoint\":\"\",\"UnfilledQuantity\":\"\",\"ShippedQuantity\":\"\",\"CancelledQuantity\":\"\",\"InvoicedQuantity\":\"\",\"NotBeforeDate\":\"\",\"CustomerRequestedDeliveryDate\":\"\",\"CurrentPromiseDate\":\"\",\"OriginalPromiseDate\":\"\",\"CurrentOnsiteDate\":\"\",\"OriginalOnsiteDate\":\"\",\"Routing\":\"\",\"Carrier\":\"\",\"FreightTerms\":\"\",\"IncoTerms\":\"\",\"InternationallShipHoldIndicator\":\"\",\"MarketingHoldIndicator\":\"\",\"PurchaserHoldIndicator\":\"\",\"EngineeringHoldindicator\":\"\",\"ClarificationHoldIndicator\":\"\",\"WillAdviseIndicator\":\"\",\"LargeOrderQuantityIndicator\":\"\",\"ShipToAddress\":{\"AddressType\":\"\",\"Name\":\"\",\"AddressLine1\":\"\",\"AddressLine2\":\"\",\"AddressLine3\":\"\",\"AddressLine4\":\"\",\"AddressLine5\":\"\",\"City\":\"\",\"StateOrProvince\":\"\",\"PostalCode\":\"\",\"CountryCode\":\"\",\"CountryName\":\"\",\"CountyName\":\"\"},\"ShipmentNotesMarkingsInstructions\":[{\"TextType\":\"\",\"Text\":[]}]}]}]}}"}
+
+]]></types:shape>
+    </types:type>
+    <types:type name="errordata" format="java">
+      <types:shape format="raml"><![CDATA[#%RAML 1.0 DataType
+type: string]]></types:shape>
+    </types:type>
+    <types:type name="inputMfgOrderBomReqData" format="java">
+      <types:shape format="raml"><![CDATA[#%RAML 1.0 DataType
+type: string]]></types:shape>
+    </types:type>
+  </types:catalog>
+</types:mule>

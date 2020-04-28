@@ -1,0 +1,174 @@
+{
+	"SalesOrder": {
+		"Sender": "",
+		"Receiver": "",
+		"Document": "",
+		"SalesOrderHeader": {
+			"OrderAction": "",
+			"Q2CNumber": "",
+			"PurchaserId": "",
+			"PurchaserName": "",
+			"CustomerName": "",
+			"PurchaserPONumber": "",
+			"QuoteStatus": "",
+			"LastChangeDate": "",
+			"OrderConvertDate": "",
+			"ProjectJobIndicator": "",
+			"EntryLocation": "",
+			"SalesOfficeName": "",
+			"SalesRepName": "",
+			"ProjectManagerName": "",
+			"PurchaserCountryCode": "",
+			"LocationCompleteShipIndicator": "",
+			"ExportType": "",
+			"FederalTaxStatus": "",
+			"StateProvinceSalesTaxStatus": "",
+			"CurrencyCode": "",
+			"HeaderNotesMarkingsInstructions": [
+				{
+					"TextType": "",
+					"Text": [
+						""
+					]
+				}
+			],
+			"Address": [
+				{
+					"AddressType": "",
+					"Name": "",
+					"AddressLine1": "",
+					"AddressLine2": "",
+					"AddressLine3": "",
+					"AddressLine4": "",
+					"AddressLine5": "",
+					"City": "",
+					"StateOrProvince": "",
+					"PostalCode": "",
+					"CountryCode": "",
+					"CountryName": "",
+					"CountyName": ""
+				}
+			],
+			"QuoteSpecialRequirements": {
+				"QuantityOfManualsRequested": "",
+				"CustomerRequestedFormatForManuals": "",
+				"ManufacturingFormatForManuals": "",
+				"SystemStudiesCoordination": "",
+				"SystemStudiesNuclear": "",
+				"SystemStudiesSeismic": "",
+				"SystemStudiesShortCircuit": "",
+				"BidBondIndicator": "",
+				"PerformanceBondIndicator": "",
+				"LiquidatedDamageIndicator": "",
+				"NumberTestAndTrialDays": ""
+			},
+			"ApprovalDrawings": {
+				"QuantityOfDrawings": "",
+				"CustomerRequestedDrawingFormat": "",
+				"ManufacturingDrawingFormat": "",
+				"ManufacturingDrawingDeliveryMode": ""
+			},
+			"RecordDrawings": {
+				"QuantityOfDrawings": "",
+				"CustomerRequestedDrawingFormat": "",
+				"ManufacturingDrawingFormat": "",
+				"ManufacturingDrawingDeliveryMode": ""
+			}
+		},
+		"SalesOrderItem": [
+			{
+				"BOMNumber": "",
+				"LineDisplayNumber": "",
+				"LineNumber": "",
+				"PurchaserSpecifiedLineNumber": "",
+				"SubLineItemId": "",
+				"SubLineItemType": "",
+				"CatalogNumber": "",
+				"ProductCode": "",
+				"CatalogDescription": "",
+				"DesignationDescription": "",
+				"ProductSpecificationNumber": "",
+				"LineCode": "",
+				"CategoryId": "",
+				"SubCategoryId": "",
+				"ProductSelectorGroupId": "",
+				"TotalOrderedQuantity": "",
+				"TotalUnfilledQuantity": "",
+				"TotalInvoicedQuantity": "",
+				"TotalShippedQuantity": "",
+				"TotalCancelledQuantity": "",
+				"UnitOfMeasure": "",
+				"UnitWeight": "",
+				"ProfileUnitNetPrice": "",
+				"AuthorizedEquipmentUnitSellingNetPrice": "",
+				"NonStockSparePartCode": "",
+				"FOBLocation": "",
+				"HazardousMaterialIndicator": "",
+				"CommittedShipDate": "",
+				"ItemNotesMarkingsInstructions": [
+					{
+						"TextType": "",
+						"Text": []
+					}
+				],
+				"ItemSpecialRequirements": {
+					"ApprovalDrawingsSentDate": "",
+					"ApprovalDrawingsRequestedDate": "",
+					"ApprovalDrawingsSuppliedBy": "",
+					"EquipmentTest": "",
+					"TestReports": "",
+					"Warranty": ""
+				},
+				"ShipmentSchedule": [
+					{
+						"ShipmentScheduleId": "",
+						"ShippingPoint": "",
+						"ProgressPoint": "",
+						"UnfilledQuantity": "",
+						"ShippedQuantity": "",
+						"CancelledQuantity": "",
+						"InvoicedQuantity": "",
+						"NotBeforeDate": "",
+						"CustomerRequestedDeliveryDate": "",
+						"CurrentPromiseDate": "",
+						"OriginalPromiseDate": "",
+						"CurrentOnsiteDate": "",
+						"OriginalOnsiteDate": "",
+						"Routing": "",
+						"Carrier": "",
+						"FreightTerms": "",
+						"IncoTerms": "",
+						"InternationallShipHoldIndicator": "",
+						"MarketingHoldIndicator": "",
+						"PurchaserHoldIndicator": "",
+						"EngineeringHoldindicator": "",
+						"ClarificationHoldIndicator": "",
+						"WillAdviseIndicator": "",
+						"LargeOrderQuantityIndicator": "",
+						"ShipToAddress": {
+							"AddressType": "",
+							"Name": "",
+							"AddressLine1": "",
+							"AddressLine2": "",
+							"AddressLine3": "",
+							"AddressLine4": "",
+							"AddressLine5": "",
+							"City": "",
+							"StateOrProvince": "",
+							"PostalCode": "",
+							"CountryCode": "",
+							"CountryName": "",
+							"CountyName": ""
+						},
+						"ShipmentNotesMarkingsInstructions": [
+							{
+								"TextType": "",
+								"Text": []
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}
