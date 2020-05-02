@@ -37,7 +37,7 @@ output application/java
 		"technicalErrorMessage": "",
 		"userId": "",
 		"uuid": "",
-		"virtualLocation": "",
+		"virtualLocation": "", 
 		"xrefFrom": "",
 		"xrefThis": "",
 		"xrefTo": ""
@@ -45,6 +45,5 @@ output application/java
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
-		<logger level="INFO" doc:name="requestPayload" doc:id="ecafee40-a181-40a5-bda5-1cafc03092cd" message="=============#[payload]==================           "/>
 	</flow>
 </mule>
